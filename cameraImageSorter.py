@@ -280,7 +280,7 @@ def getMostRecentFile(path, originalpath):
                 break
         
         # if dir not found, get files in current dir, sort them (in reverse again to get latest at top), get last modified time for top file (file[0]), then change
-        # back dirs to be in dir where script is (so other stuff doesn't break), then return date/time in a readable format (instead of seconds since 1969 or whatever)
+        # back dirs to be in dir where script is (so other stuff doesn't break), then return date/time in a readable format (instead of seconds since 1970 or whatever)
         if not dirFound:
             files = os.listdir(os.getcwd())
             files.sort(reverse=True)
